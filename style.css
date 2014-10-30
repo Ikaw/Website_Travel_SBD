@@ -1,0 +1,26 @@
+body
+{
+	font-family:times new roman;
+	font-size:16px;
+}
+
+a
+{
+	font-family:times new roman;
+	font-size:16px;
+	color:#333333;
+	text-decoration:none;
+}
+
+a:hover
+{
+	color:#ffffff;
+	background-color:#333333;
+	text-decoration:none
+}
+
+input, textarea, select, option
+{
+	font-family:times new roman;
+	font-size:16px;
+}
