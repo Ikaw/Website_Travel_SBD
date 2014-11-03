@@ -1,35 +1,30 @@
 <?php
-include "koneksi.php";
-//proses input 
-if (isset($_POST['input'])) 
-{
-	$pool = $_POST['pool'];
-	$tujuan = $_POST['tujuan'];
-	
-
-	//insert ke tabel
-	$query = "INSERT INTO trayek (id_trayek, tujuan, pool) 
-	VALUES('','$_POST[pool]','$_POST[tujuan]')";
-	$sql = mysql_query($query);
-	if ($sql) 
-	{
-		echo "<h2><font color=blue>Order telah berhasil ditambahkan</font></h2>";
-	} else {
-		echo "<h2><font color=red>Order gagal ditambahkan</font></h2>";
-	} 
-}
+	session_start();
 ?>
+
+<a href="home.php">Halaman Depan</a> | 
+<a href="profile.php">Profile</a> | 
+<a href="order.php">Booking</a> |
+<a href="about.php">About</a> |
+<a href="logout.php">Logout</a>
+
+<center>
+<?php
+	if(!isset($_SESSION['Username'])) {
+		header('location:login.php'); 
+	} else { 
+		$Username = $_SESSION['Username']; 
+	}
+?>
+
+
 <html>
-	<head><title>Daftar Member</title>
+	<head><title>Booking</title>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<a href="home.php">Halaman Depan</a> |
-		<a href="input2.php">Daftar Member</a> | 
-		<a href="order.php">Booking</a> |
-		<a href="timeandseats.php">Time And Seats</a>
-		<br><br>
-		<FORM ACTION="" METHOD="POST" NAME="input">
+		<br>
+		<FORM ACTION="" METHOD="POST">
 			<table>
 				<tr>
 					<td colspan="2">
@@ -41,12 +36,14 @@ if (isset($_POST['input']))
 						Pool
 					</td>
 					<td>:
-						<select name='pool[]'>
+						<select name="pool" onchange="showHint(this.value")>
+						<option value="">--Pilih Pool--</option>
 						<?
-							$query = "SELECT id_trayek, pool FROM trayek ORDER BY pool";
-							$sql = mysql_query ($query);
-							while ($hasil = mysql_fetch_array ($sql)){
-								echo "<option value='$hasil[id_trayek]'>$hasil[pool]</option>";
+							include "koneksi.php";
+							$Username=$_GET['Username'];
+							$query = mysql_query ("SELECT * FROM pool WHERE Username=$Username");
+							while ($hasil = mysql_fetch_array ($query)){
+								echo "<option value='$hasil[Pool]'>$hasil[Pool]</option>";
 							}
 						?>
 						</select>
@@ -57,12 +54,13 @@ if (isset($_POST['input']))
 						Kota Tujuan
 					</td>
 					<td>:
-						<select name="tujuan">
+						<select name="tujuan" onchange="showHint(this.value")>
+						<option value="">--Pilih Kota Tujuan--</option>
 						<?
-							$query = "SELECT id_trayek, tujuan FROM trayek ORDER BY tujuan";
-							$sql = mysql_query ($query);
-							while ($hasil = mysql_fetch_array($sql)){
-								echo "<option value='$hasil[id_trayek]'>$hasil[tujuan]</option>";
+							include "koneksi.php";
+							$query = mysql_query ("SELECT * FROM tujuan");
+							while ($hasil = mysql_fetch_row ($query)){
+								echo "<option value='$Tujuan[0]'>$Tujuan[1]</option>";
 							}
 						?>
 						</select>
