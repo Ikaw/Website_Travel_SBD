@@ -27,6 +27,7 @@ SELECT "MEMBER" AS "MEMBER";
 	
 SELECT * FROM pelanggan;
 
+/*
 set foreign_key_checks=0;
 DROP TABLE IF EXISTS pool;
 set foreign_key_checks=1;
@@ -70,6 +71,7 @@ VALUES
 SELECT "TUJUAN" AS "TUJUAN";
 #---
 SELECT * FROM tujuan;
+*/
 
 
 set foreign_key_checks=0;
@@ -80,33 +82,18 @@ set foreign_key_checks=1;
 CREATE TABLE trayek
 (
 Id_Trayek char(20) primary key not null,
-Id_Pool char(20) not null,
-Id_Tujuan char(20) not null,
-Harga char(30) not null,
-foreign key (Id_Pool) references pool(Id_Pool)
-on delete cascade on update cascade,
-foreign key (Id_Tujuan) references tujuan(Id_Tujuan)
-on delete cascade on update cascade
+Pool varchar(20) not null,
+Tujuan varchar(20) not null,
+Kode_Tempat int(11) not null,
+Harga char(30) not null
 )ENGINE=InnoDb;
 
-INSERT INTO trayek (Id_Trayek, Id_Pool, Id_Tujuan, Harga)
+INSERT INTO trayek (Id_Trayek, Pool, Tujuan, Kode_Tempat, Harga)
 VALUES
-	('1','1','1','100000'),
-	('2','1','2','50000'),
-	('3','1','3','50000'),
-	('4','1','4','50000'),
-	('5','1','5','50000'),
-	('6','1','6','150000'),
-	('7','1','7','150000'),
-	('8','1','8','150000'),
-	('9','1','1','100000'),
-	('10','1','2','50000'),
-	('11','1','3','50000'),
-	('12','1','4','50000'),
-	('13','1','5','50000'),
-	('14','1','6','150000'),
-	('15','1','7','150000'),
-	('16','1','8','150000');
+	('1','Cabang1','Jakarta',1234,'100000'),
+	('2','Cabang2','Jakarta',2345,'50000'),
+	('3','Cabang1','Depok',1234,'50000'),
+	('4','Cabang2','Bogor',2345,'50000');
 	
 #---
 SELECT "TRAYEK" AS "TRAYEK";
