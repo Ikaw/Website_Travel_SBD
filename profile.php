@@ -1,14 +1,19 @@
 <?php
 	session_start();
 ?>
-
+<head><title>Profile</title>
+<link rel="stylesheet" href="style.css">
+</head>
 <a href="home.php">Halaman Depan</a> | 
 <a href="profile.php">Profile</a> | 
-<a href="order.php">Booking</a> |
+<a href="Booking_Plan.php">Booking</a> |
 <a href="about.php">About</a> |
 <a href="logout.php">Logout</a>
 
+
+
 <center>
+<br><h2>Profile</h2><br>
 <?php
 	if(!isset($_SESSION['Username'])) {
 		header('location:login.php'); 

@@ -9,9 +9,12 @@
 		$query = mysql_query("SELECT * FROM pelanggan WHERE Username = '$Username'");
 		$hasil = mysql_fetch_array($query);
 ?>
+<head><title>Booking</title>
+		<link rel="stylesheet" href="style.css">
+</head>
 		<a href="home.php">Halaman Depan</a> | 
 		<a href="profile.php">Profile</a> | 
-		<a href="order.php">Booking</a> |
+		<a href="Booking_Plan.php">Booking</a> |
 		<a href="about.php">About</a> |
 		<a href="logout.php">Logout</a>
 <center>

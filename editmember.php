@@ -25,11 +25,12 @@
 	<body>
 		<a href="home.php">Halaman Depan</a> | 
 		<a href="profile.php">Profile</a> | 
-		<a href="order.php">Booking</a> |
-		<a href="about.php">About</a>
+		<a href="Booking_Plan.php">Booking</a> |
+		<a href="about.php">About</a> |
+		<a href="logout.php">Logout</a>
 		<br>
 		<FORM ACTION="proseseditmember.php" METHOD="POST" >
-			<table>
+			<table align="center">
 			<input type="hidden" name="Username" value="<?php echo $Username;?>"/>
 			<input type="hidden" name="Password" value="<?php echo $Password;?>"/>
 				<tr>
@@ -65,9 +66,14 @@
 					<td>: <input type="text" name="Email" size="30" value="<?php echo $Email;?>"/><br>
 					</td>
 				</tr>
+				<tr>
+					<td colspan="2" align="center">
+					<input type="submit" name="input" value="Simpan">&nbsp;
+					<input type="reset" name="reset" value="Cancel">
+					</td>
+				</tr>
 			</table>
-			<input type="submit" name="input" value="Simpan">&nbsp;
-			<input type="reset" name="reset" value="Cancel">
+			
 		</FORM>
 	</body>
 </html>
