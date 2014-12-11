@@ -1,9 +1,5 @@
-<?php 
-	session_start();
-	unset($_SESSION['Username']);
+<?php session_start();
+if(isset($_SESSION['userlogin']))
+  unset($_SESSION['userlogin']);
+  header("location:index.php");
 ?>
-<center>
-	<h2>Anda telah berhasil logout..</h2><br>
-
-	<a href="login.php">Silahkan klik <b>disini</b> untuk login kembali</a>
-</center>

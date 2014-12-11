@@ -1,35 +1,18 @@
-<?php
+<?php session_start();
+include("config.php");
+$user = $_POST['usertxt'];
+$user = str_replace("'","&acute;",$user);
+$psw=$_POST['pswtxt'];
+$psw= str_replace("'","&acute;",$psw);
+$cek = "Select username,password from member where username='".$user."' and password='".$psw."'";
+
+$hasil = mysql_query($cek);
+$hasil_cek = mysql_num_rows($hasil);
+if ($hasil_cek==0){
+header("location:index.php");
+}else{
 	session_start();
-	if(isset($_SESSION['Username'])) {
-	header('location:home.php'); }
-	require_once("koneksi.php");
+	$_SESSION['userlogin'] =$user;
+	header("location:home.php");
+}
 ?>
-<center>
-<form action="proseslogin.php" method="post">
-	<h1>LOGIN</h1>
-	<table>
-		<tbody>
-		<tr>
-			<td>Username</td>
-			<td>: <input name="Username" type="text" /></td>
-		</tr>
-		<tr>
-			<td>Password</td>
-			<td>: <input name="Password" type="password" /></td>
-		</tr>
-		<tr>
-			<td colspan="2" align="right">
-			<input type="submit" value="Login" /> 
-			<input type="reset" value="Batal" />
-			</td>
-		</tr>
-		<tr>
-			<td colspan="2" align="center">
-			Belum Punya akun ? 
-			<a href="daftar.php"><b>Daftar</b></a>
-			</td>
-		</tr>
-		</tbody>
-	</table>
-</form>
-</center>

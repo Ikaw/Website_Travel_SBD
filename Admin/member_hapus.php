@@ -2,8 +2,8 @@
 if (ISSET($_SESSION['adminlogin']))
 {
 require("config.php");
-$id = $_GET['id'];
-$perintah = "DELETE from member where id = $id";
+$id_member = $_GET['id_member'];
+$perintah = "DELETE from member where id_member = $id_member";
 $result = mysql_query($perintah);
 	if ($result) {
 		header("location:member.php");

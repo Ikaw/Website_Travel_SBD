@@ -1,50 +1,40 @@
   <?php
   require ("config.php");
-  $perintah="select * from jamberangkat where id='".$_GET['id']."'";
+  $perintah="select * from jamberangkat where id_jam='".$_GET['id_jam']."'";
   $hasil=mysql_query($perintah);
   $data=mysql_fetch_array($hasil);
   //$tampil_deskripsi=str_replace("<br>","\r\n",$data['deskripsi']);
   ?>
   
-<link href="styles/kendo.common.min.css" rel="stylesheet" />
-<link href="styles/kendo.default.min.css" rel="stylesheet" />
-
-<script src="js/jquery.min.js"></script>
-<script src="js/kendo.web.min.js"></script>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-		$("#jamtxt").kendoTimePicker();
-	
-	});
-</script>
-
 <form id="form1" name="form1" method="post" action="jamberangkat_ubah_proses.php">
-  <table width="400" border="0" align="left">
+  <table width="650" border="0" align="left">
     <tr>
-      <td align="left" valign="top">ID</td>
-      <td align="left" valign="top">:</td>
-      <td align="left" valign="top"><label for="idtxt"></label>
-      <input name="idtxt" type="text" id="idtxt" value="<?php echo $data['id'] ?>" readonly="readonly" /></td>
+      <td colspan="3">Form Ubah Data Jam Berangkat <hr color="black" width="650"/></td>
     </tr>
     <tr>
-      <td width="10%" align="left" valign="top">Jam Berangkat </td>
-      <td width="1%" align="left" valign="top">:</td>
-      <td width="89%" align="left" valign="top"><label>
-        <input name="jamtxt" type="text" id="jamtxt" readonly="readonly" value="<?php echo $data['jam'] ?>"/>
+      <td align="30%" valign="top">ID</td>
+      <td align="1%" valign="top">:</td>
+      <td align="69%" valign="top"><label for="idtxt"></label>
+      <input name="idtxt" type="text" id="idtxt" size="40" value="<?php echo $data['id_jam'] ?>" readonly="readonly" /></td>
+    </tr>
+    <tr>
+      <td width="left" align="left" valign="top">Jam Berangkat </td>
+      <td width="left" align="left" valign="top">:</td>
+      <td width="left" align="left" valign="top"><label>
+        <input name="jamtxt" type="text" id="jamtxt" size="40" value="<?php echo $data['jam'] ?>"/>
       </label>
         </span></td>
     </tr>
     <tr>
       <td align="left" valign="top">&nbsp;</td>
       <td align="left" valign="top">&nbsp;</td>
-      <td align="left" valign="top"><hr /></td>
+      <td align="left" valign="top"><hr color="black"/></td>
     </tr>
     <tr>
       <td align="left" valign="top">&nbsp;</td>
       <td align="left" valign="top">&nbsp;</td>
       <td align="left" valign="top"><label>
-        <input type="submit" name="Submit" value="Ubah" />
+        <input type="submit" name="Submit" value="Simpan" />
       </label>
         </span></td>
     </tr>

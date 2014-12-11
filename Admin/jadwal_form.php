@@ -3,52 +3,61 @@ form {
 	font-family: "Segoe UI", "Segoe UI Light";
 }
 #form1 table {
-	font-size: 18px;
+	font-size: 16px;
 }
 #form1 table tr td p {
 	font-size: 14px;
 }
 </style>
+
 <form id="form1" name="form1" method="post" action="jadwal_tambah.php">
-  <table width="400" border="0" align="left"> 
-    <tr>
-      <td width="10%" align="left" valign="top">Trayek</td>
+  <table width="650" border="0" align="left"> 
+  	<tr>
+      <td width="30%" align="left" valign="top">ID </td>
       <td width="1%" align="left" valign="top">:</td>
-      <td width="89%" align="left" valign="top"><label for="trytxt"></label>
-        <label for="trylist"></label>
-        <select name="trylist" size="1" id="trylist">
+      <td width="69%" align="left" valign="top"><label>
+        <input name="idtxt" type="text" id="idtxt" size="40">
+      </label>
+        </span></td>
+    </tr>
+    <tr>
+      <td width="left" align="left" valign="top">ID Trayek</td>
+      <td width="left" align="left" valign="top">:</td>
+      <td width="left" align="left" valign="top"><label for="tratxt"></label>
+        <label for="tralist"></label>
+        <select name="tralist" size="1" id="tralist">
             
       <?php
 	  require ("config.php");
-	  $perintah="select * from trayek order by id asc";
+	  $perintah="select * from trayek order by id_trayek asc";
 	  $hasil=mysql_query($perintah);
 	  while ($data = mysql_fetch_array($hasil))
 	 {
   ?>
-      <option value="<?php echo "$data[id]"; ?>"><?php echo "$data[id]"; }?></option>
+      <option value="<?php echo "$data[id_trayek]"; ?>"><?php echo "$data[id_trayek]"; }?></option>
       </select></td>
     </tr>
 	<tr>
-      <td width="10%" align="left" valign="top">Jam Berangkat</td>
-      <td width="1%" align="left" valign="top">:</td>
-      <td width="89%" align="left" valign="top"><label for="jamtxt"></label>
+      <td width="left" align="left" valign="top">ID Jam Berangkat</td>
+      <td width="left" align="left" valign="top">:</td>
+      <td width="left" align="left" valign="top"><label for="jamtxt"></label>
         <label for="jamlist"></label>
-        <select name="jamlist" size="1" id="jamlist">
+        <select name="jamlist" size="1" id="jamlist" size="40">
             
       <?php
 	  require ("config.php");
-	  $perintah="select jam from jam order by jam asc";
+	  $perintah="select * from jamberangkat order by id_jam asc";
 	  $hasil=mysql_query($perintah);
 	  while ($data = mysql_fetch_array($hasil))
 	 {
   ?>
-      <option value="<?php echo "$data[id]"; ?>"><?php echo "$data[id]"; }?></option>
+      <option value="<?php echo "$data[id_jam]"; ?>"><?php echo "$data[id_jam]"; }?></option>
       </select></td>
     </tr>
     <tr>
       <td align="left" valign="top">&nbsp;</td>
       <td align="left" valign="top">&nbsp;</td>
-      <td align="left" valign="top"><hr /></td>
+      <td align="left" valign="top"><hr color="black"/></td>
     </tr>
     <tr>
       <td align="left" valign="top">&nbsp;</td>

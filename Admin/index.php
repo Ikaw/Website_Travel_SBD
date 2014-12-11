@@ -40,10 +40,10 @@ body {
 }
 .Menu_Login table tr td table tr td {
 	color: #000;
-	font-size: 18px;
+	font-size: 16px;
 }
 .Menu_Login table tr td table {
-	font-size: 18px;
+	font-size: 16px;
 }
 .Menu_Login table tr td {
 	color: #000;
@@ -54,11 +54,11 @@ body {
 <div class="Menu_Login">
   <table width="437" border="0" align="center" cellpadding="0" cellspacing="0">
     <tr>
-      <td align="center" valign="middle" bgcolor="#9b9191">Login
+      <td align="center" valign="middle" bgcolor="#3e9fdd">L O G I N
       <hr /></td>
     </tr>
     <tr>
-      <td bgcolor="#9b9191"><table width="437" border="0" cellspacing="5" cellpadding="0">
+      <td bgcolor="#3e9fdd"><table width="437" border="0" cellspacing="5" cellpadding="0">
         <tr>
           <td width="157" align="right">Username</td>
           <td width="265">

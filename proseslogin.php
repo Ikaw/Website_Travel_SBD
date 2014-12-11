@@ -1,9 +1,9 @@
 <?php 
 	session_start();
 	require_once("koneksi.php");
-	$Username = $_POST['Username'];
-	$Password = $_POST['Password'];
-	$cekuser = mysql_query("SELECT * FROM pelanggan WHERE Username = '$Username'");
+	$Username = $_POST['username'];
+	$Password = $_POST['password'];
+	$cekuser = mysql_query("SELECT * FROM member WHERE username = '$username'");
 	$jumlah = mysql_num_rows($cekuser);
 	$hasil = mysql_fetch_array($cekuser);
 	if($jumlah == 0) {

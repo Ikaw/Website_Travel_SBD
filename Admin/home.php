@@ -52,7 +52,7 @@ body {
 	background-image: url(../gambar/Background.gif);
 }
 </style>
-<body onload="MM_preloadImages('../gambar/btnadmin2.jpg','../gambar/btnmember2.jpg','../gambar/btntrayek2.jpg','../gambar/btnjamberangkat2.jpg','../gambar/btnjadwal2.jpg','../gambar/btndetailpesanan2.jpg','../gambar/btnpesanan2.jpg','../gambar/btnlogout2.jpg')">
+<body onload="MM_preloadImages('../gambar/btnadmin2.jpg','../gambar/btnmember2.jpg','../gambar/btntrayek2.jpg','../gambar/btnjamberangkat2.jpg','../gambar/btnjadwal2.jpg','../gambar/btnpesanan2.jpg','../gambar/btnlogout2.jpg')">
 <table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
     <td colspan="2"><img src="../gambar/header1.jpg" width="900" height="169" /></td>
@@ -80,14 +80,11 @@ body {
       <tr>
         <td><a href="pesanan.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnpesanan','','../gambar/btnpesanan2.jpg',1)"><img src="../gambar/btnpesanan.jpg" width="200" height="30" id="btnpesanan" /></a></td>
       </tr>
-	  <tr>
-        <td><a href="detailpesanan.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btndetailpesanan','','../gambar/btndetailpesanan2.jpg',1)"><img src="../gambar/btndetailpesanan.jpg" width="200" height="30" id="btndetailpesanan" /></a></td>
-      </tr>
       <tr>
         <td><a href="logout.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnlogout','','../gambar/btnlogout2.jpg',1)"><img src="../gambar/btnlogout.jpg" width="200" height="30" id="btnlogout" /></a></td>
       </tr>
     </table></td>
-    <td width="600" valign="top">&nbsp;</td>
+    <td width="600" valign="top"></td>
   </tr>
   <tr>
     <td colspan="2"><img src="../gambar/footeradmin.jpg" width="900" height="98" /></td>

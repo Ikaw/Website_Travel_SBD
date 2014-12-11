@@ -6,15 +6,18 @@ if (ISSET($_SESSION['adminlogin']))
 else
 header("location:index.php");
 ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Travel Online</title>
+
 <script type="text/javascript">
 function MM_swapImgRestore() { //v3.0
   var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
 }
+
 function MM_preloadImages() { //v3.0
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
@@ -37,21 +40,11 @@ function MM_swapImage() { //v3.0
 </head>
 
 <style type="text/css">
-.Menu_Kiri {
-	width: 150px;
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 14px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-.Menu_Tengah {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
 body {
 	background-image: url(../gambar/Background.gif);
 }
 </style>
+
 <body onload="MM_preloadImages('../gambar/btnadmin2.jpg','../gambar/btnmember2.jpg','../gambar/btntrayek2.jpg','../gambar/btnjamberangkat2.jpg','../gambar/btnjadwal2.jpg','../gambar/btnpesanan2.jpg','../gambar/btnlogout2.jpg')">
 <table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
@@ -61,43 +54,48 @@ body {
     <td colspan="2"><img src="../gambar/header2.jpg" width="900" height="30" /></td>
   </tr>
   <tr>
-    <td width="200"><table width="200" border="0" cellspacing="6" cellpadding="3">
-      <tr>
-        <td><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnadmin','','../gambar/btnadmin2.jpg',1)"><img src="../gambar/btnadmin.jpg" width="200" height="30" id="btnadmin" /></a></td>
-      </tr>
-      <tr>
-        <td><a href="member.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnmember','','../gambar/btnmember2.jpg',1)"><img src="../gambar/btnmember.jpg" width="200" height="30" id="btnmember" /></a></td>
-      </tr>
-      <tr>
-        <td><a href="trayek.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btntrayek','','../gambar/btntrayek2.jpg',1)"><img src="../gambar/btntrayek.jpg" width="200" height="30" id="btntrayek" /></a></td>
-      </tr>
-      <tr>
-        <td><a href="jamberangkat.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnjamberangkat','','../gambar/btnjamberangkat2.jpg',1)"><img src="../gambar/btnjamberangkat.jpg" width="200" height="30" id="btnjamberangkat" /></a></td>
-      </tr>
-      <tr>
-        <td><a href="jadwal.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnjadwal','','../gambar/btnjadwal2.jpg',1)"><img src="../gambar/btnjadwal.jpg" width="200" height="30" id="btnjadwal" /></a></td>
-      </tr>
-      <tr>
-        <td><a href="pesanan.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnpesanan','','../gambar/btnpesanan2.jpg',1)"><img src="../gambar/btnpesanan.jpg" width="200" height="30" id="btnpesanan" /></a></td>
-      </tr>
-      <tr>
-        <td><a href="logout.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnlogout','','../gambar/btnlogout2.jpg',1)"><img src="../gambar/btnlogout.jpg" width="200" height="30" id="btnlogout" /></a></td>
-      </tr>
-    </table></td>
-    <td width="700" valign="top"><table width="600" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td colspan="2" class="juduladmin"><span class="juduladmin">Member</span><hr /></td>
+    <td width="200" valign="top">
+      <table width="200" border="0" cellspacing="6" cellpadding="3">
+        <tr>
+          <td><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnadmin','','../gambar/btnadmin2.jpg',1)"><img src="../gambar/btnadmin.jpg" width="200" height="30" id="btnadmin" /></a></td>
         </tr>
-	  <tr>
+        <tr>
+          <td><a href="member.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnmember','','../gambar/btnmember2.jpg',1)"><img src="../gambar/btnmember.jpg" width="200" height="30" id="btnmember" /></a></td>
+        </tr>
+        <tr>
+          <td><a href="trayek.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btntrayek','','../gambar/btntrayek2.jpg',1)"><img src="../gambar/btntrayek.jpg" width="200" height="30" id="btntrayek" /></a></td>
+        </tr>
+        <tr>
+          <td><a href="jamberangkat.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnjamberangkat','','../gambar/btnjamberangkat2.jpg',1)"><img src="../gambar/btnjamberangkat.jpg" width="200" height="30" id="btnjamberangkat" /></a></td>
+        </tr>
+        <tr>
+          <td><a href="jadwal.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnjadwal','','../gambar/btnjadwal2.jpg',1)"><img src="../gambar/btnjadwal.jpg" width="200" height="30" id="btnjadwal" /></a></td>
+        </tr>
+        <tr>
+          <td><a href="pesanan.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnpesanan','','../gambar/btnpesanan2.jpg',1)"><img src="../gambar/btnpesanan.jpg" width="200" height="30" id="btnpesanan" /></a></td>
+        </tr>
+        <tr>
+          <td><a href="logout.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnlogout','','../gambar/btnlogout2.jpg',1)"><img src="../gambar/btnlogout.jpg" width="200" height="30" id="btnlogout" /></a></td>
+        </tr>
+      </table>
+    </td>
+    <td width="650" valign="top"><table width="650" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td colspan="2" class="juduladmin">
+          <span class="juduladmin">Member</span>
+          <hr color="black"/>
+        </td>
+      </tr>
+	    <tr>
         <td colspan="2"><?php include "member_form.php"; ?></td>
-        </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
       </tr>
       <tr>
         <td colspan="2"><?php include "member_data.php"; ?></td>
         </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
     </table></td>
   </tr>
   <tr>

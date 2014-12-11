@@ -37,21 +37,12 @@ function MM_swapImage() { //v3.0
 </head>
 
 <style type="text/css">
-.Menu_Kiri {
-	width: 150px;
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 14px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-.Menu_Tengah {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
+
 body {
 	background-image: url(../gambar/Background.gif);
 }
 </style>
+
 <body onload="MM_preloadImages('../gambar/btnadmin2.jpg','../gambar/btnmember2.jpg','../gambar/btntrayek2.jpg','../gambar/btnjamberangkat2.jpg','../gambar/btnjadwal2.jpg','../gambar/btndetailpesanan2.jpg','../gambar/btnpesanan2.jpg','../gambar/btnlogout2.jpg')">
 <table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
@@ -61,7 +52,7 @@ body {
     <td colspan="2"><img src="../gambar/header2.jpg" width="900" height="30" /></td>
   </tr>
   <tr>
-    <td width="200"><table width="200" border="0" cellspacing="6" cellpadding="3">
+    <td width="200" valign="top"><table width="200" border="0" cellspacing="6" cellpadding="3">
       <tr>
         <td><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnadmin','','../gambar/btnadmin2.jpg',1)"><img src="../gambar/btnadmin.jpg" width="200" height="30" id="btnadmin" /></a></td>
       </tr>
@@ -84,19 +75,21 @@ body {
         <td><a href="logout.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnlogout','','../gambar/btnlogout2.jpg',1)"><img src="../gambar/btnlogout.jpg" width="200" height="30" id="btnlogout" /></a></td>
       </tr>
     </table></td>
-    <td width="700" valign="top"><table width="600" border="0" cellspacing="0" cellpadding="0">
+    <td width="650" valign="top"><table width="650" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td colspan="2" class="juduladmin"><span class="juduladmin">Jam Berangkat</span><hr /></td>
+        <td colspan="2" class="juduladmin">
+          <span class="juduladmin">Jam Berangkat</span>
+          <hr color="black"/></td>
       </tr>
-	  <tr>
+	    <tr>
         <td colspan="2"><?php include "jamberangkat_form.php"; ?></td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td colspan="2"><?php include "jamberangkat_data.php"; ?></td>
       </tr>
       <tr>
-        <td colspan="2"><?php include "jamberangkat_data.php"; ?></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
       </tr>
     </table></td>
   </tr>
