@@ -49,7 +49,7 @@ function MM_swapImage() { //v3.0
 	margin-bottom: 10px;
 }
 body {
-	background-image: url(../gambar/Background.gif);
+	background-color: #cdedf6;
 }
 </style>
 <body onload="MM_preloadImages('../gambar/btnadmin2.jpg','../gambar/btnmember2.jpg','../gambar/btntrayek2.jpg','../gambar/btnjamberangkat2.jpg','../gambar/btnjadwal2.jpg','../gambar/btnpesanan2.jpg','../gambar/btnlogout2.jpg')">

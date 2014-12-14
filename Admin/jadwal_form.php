@@ -21,38 +21,51 @@ form {
         </span></td>
     </tr>
     <tr>
-      <td width="left" align="left" valign="top">ID Trayek</td>
-      <td width="left" align="left" valign="top">:</td>
-      <td width="left" align="left" valign="top"><label for="tratxt"></label>
-        <label for="tralist"></label>
-        <select name="tralist" size="1" id="tralist">
-            
+      <td  align="left" valign="top">ID Trayek</td>
+      <td  align="left" valign="top">:</td>
+      <td  align="left" valign="top"><label>           
       <?php
-	  require ("config.php");
-	  $perintah="select * from trayek order by id_trayek asc";
-	  $hasil=mysql_query($perintah);
-	  while ($data = mysql_fetch_array($hasil))
-	 {
-  ?>
-      <option value="<?php echo "$data[id_trayek]"; ?>"><?php echo "$data[id_trayek]"; }?></option>
-      </select></td>
+            include "config.php";
+            $result = mysql_query("select * from trayek");
+            $jsArray = "var pool = new Array();\n";
+            echo '<select name="id_trayek" onchange="document.getElementById(\'pool\').value = pool[this.value]">';
+            echo '<option>-------</option>';
+            while ($row = mysql_fetch_array($result)) {
+                echo '<option value="' . $row['id_trayek'] . '">' . $row['id_trayek'] . '</option>';
+                $jsArray .= "pool['" . $row['id_trayek'] . "'] = '" . addslashes($row['pool']) . "';\n";
+            }
+            echo '</select>';
+            ?>
+
+
+            <input name="pool" id="pool"/>
+            <script type="text/javascript">
+            <?php echo $jsArray; ?>
+            </script>
+      </label</td>
     </tr>
 	<tr>
-      <td width="left" align="left" valign="top">ID Jam Berangkat</td>
-      <td width="left" align="left" valign="top">:</td>
-      <td width="left" align="left" valign="top"><label for="jamtxt"></label>
-        <label for="jamlist"></label>
-        <select name="jamlist" size="1" id="jamlist" size="40">
-            
-      <?php
-	  require ("config.php");
-	  $perintah="select * from jamberangkat order by id_jam asc";
-	  $hasil=mysql_query($perintah);
-	  while ($data = mysql_fetch_array($hasil))
-	 {
-  ?>
-      <option value="<?php echo "$data[id_jam]"; ?>"><?php echo "$data[id_jam]"; }?></option>
-      </select></td>
+      <td align="left" valign="top">ID Jam Berangkat</td>
+      <td align="left" valign="top">:</td>
+      <td align="left" valign="top">
+        <?php
+            include "config.php";
+            $result = mysql_query("select * from jamberangkat");
+            $jsArray = "var jam = new Array();\n";
+            echo '<select name="id_jam" onchange="document.getElementById(\'jam\').value = jam[this.value]">';
+            echo '<option>-------</option>';
+            while ($row = mysql_fetch_array($result)) {
+                echo '<option value="' . $row['id_jam'] . '">' . $row['id_jam'] . '</option>';
+                $jsArray .= "jam['" . $row['id_jam'] . "'] = '" . addslashes($row['jam']) . "';\n";
+            }
+            echo '</select>';
+            ?>
+
+
+            <input name="jam" id="jam"/>
+            <script type="text/javascript">
+            <?php echo $jsArray; ?>
+            </script></td>
     </tr>
     <tr>
       <td align="left" valign="top">&nbsp;</td>

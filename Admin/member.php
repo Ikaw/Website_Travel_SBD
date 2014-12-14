@@ -41,7 +41,7 @@ function MM_swapImage() { //v3.0
 
 <style type="text/css">
 body {
-	background-image: url(../gambar/Background.gif);
+	background-color: #cdedf6;
 }
 </style>
 

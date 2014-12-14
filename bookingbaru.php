@@ -87,7 +87,7 @@ body {
 					<td>Logout<a href="logout.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnlogoutuser','','../gambar/btnlogoutuser2.jpg',1)"><img src="../webtravel/gambar/btnlogoutuser.jpg"  id="btnlogoutuser"/></td>
 				</tr>
 				<tr>
-					<td colspan="5">....Isi Booking....</td>
+					<td colspan="5"><?php include "booking_satu.php"; ?></td>
 				</tr>
 		</table>
 		</td>
