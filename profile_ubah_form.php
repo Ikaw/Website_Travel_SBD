@@ -14,7 +14,7 @@
       <td width="30%" align="left" valign="top">ID</td>
       <td width="1%" align="left" valign="top">:</td>
       <td width="69%" align="left" valign="top"><label for="idtxt"></label>
-      <input name="idtxt" type="text" id="idtxt" size="40" value="<?php echo $data['id_member'] ?>" readonly="readonly" /></td>
+      <?php echo $data['id_member'] ?></td>
     </tr>
     <tr>
       <td align="left" valign="top">Nama </td>
@@ -28,7 +28,7 @@
       <td align="left" valign="top">Alamat</td>
       <td align="left" valign="top">:</td>
       <td align="left" valign="top"><label for="almtxt"></label>
-        <input type="text" name="almtxt" id="almtxt" size="40" value="<?php echo $data['alamat'] ?>" /></td>
+        <textarea name="almtxt" id="almtxt" cols="30" rows="5" value="<?php echo $data['alamat'] ?>"></textarea></td>
     </tr>
     <tr>
       <td align="left" valign="top">Telepon</td>
@@ -67,7 +67,7 @@
         <input type="submit" name="Submit" value="Simpan" />
         </label>
         <label>
-        <input type="reset" name="Submit" value="Batal" />
+        <a href="profilefix.php"><input type="submit" value="Batal" /></a>
         </label>
         </span></td>
     </tr>

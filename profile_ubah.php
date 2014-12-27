@@ -1,10 +1,10 @@
 <?php session_start();
 if (ISSET($_SESSION['userlogin']))
 {
-//Tidak ada event, dalam artian menghindari jump page  		
+//Tidak ada event, dalam artian menghindari jump page     
 }
 else
-header("location:index.php");
+header("location:coba.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -15,7 +15,6 @@ header("location:index.php");
     <link type="text/css" rel="Stylesheet" href="../css/imageslidermaker.css" />
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300|Titillium+Web:300,400" rel="stylesheet" type="text/css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="../js/bjqs-1.3-imageslidermaker.js"></script>
 
 <script type="text/javascript">
 function MM_swapImgRestore() { //v3.0
@@ -39,65 +38,66 @@ function MM_swapImage() { //v3.0
   var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
-      $(function() {
-        $("#imageslider").bjqs({
-          width: 450,
-          height: 200,
-          animtype: "slide",
-          responsive: false,
-          automatic: true,
-          keyboardnav: false,
-          markertype: "1",
-          prevtext: "Prev",
-          nexttext: "Next"
-        });
-      });
 </script>
 </head>
 
 <style type="text/css">
-.Menu_Kiri {
-	width: 150px;
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 14px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-.Menu_Tengah {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
 body {
-	background-image: url(../webtravel/gambar/background3.jpg);
+	background-image: url(../webtravel/gambar/background5.jpg);
+  background-repeat: no-repeat;
+}
+.bgtable {
+	background-image: url(../webtravel/gambar/bgtable3.gif);
+  background-repeat: no-repeat;
+  opacity:0.6;
+  fileter:alpha(opacity=75);
+}
+p {
+  font-family: Times New Roman;
+  font-size: 20px;
+  font-style: bold;
 }
 </style>
-<body onload="MM_preloadImages('../webtravel/gambar/btnhomeuser2.jpg','../webtravel/gambar/btnprofileuser2.jpg','../gambar/btntrayek2.jpg','../gambar/btnjamberangkat2.jpg','../gambar/btnjadwal2.jpg','../gambar/btndetailpesanan2.jpg','../gambar/btnpesanan2.jpg','../gambar/btnlogout2.jpg')">
-<table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
-	<tr>
-		<td colspan="2" width="900" align="center" height="230"></td>
+<body onload="MM_preloadImages('../webtravel/gambar/btnlogin2.png','../webtravel/gambar/btnprofileuser2.png','../webtravel/gambar/btnbookinguser2.png','../webtravel/gambar/btnaboutuser2.png')">
+<table width="900" border="0" align="center" cellpadding="0" cellspacing="0" >
+	<tr height="300">
+		<td></td>
 	</tr>
-	<tr>
-		<td width="850" align="center" bgcolor="white">
-			<table width="900" border="0" cellpadding="0" cellspacing="0">
-				<tr>
-					<td>Home<a href="home.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnhome','','../webtravel/gambar/btnhome.jpg',1)"><img src="../webtravel/gambar/btnhome.jpg"  id="btnhome"/></td>
-					<td>Profile<a href="profilebaru.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnprofile','','../webtravel/gambar/btnprofile.jpg',1)"><img src="../webtravel/gambar/btnprofile.jpg"  id="btnprofile"/></td>
-					<td>Booking<a href="bookingbaru.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnbooking','','../webtravel/gambar/btnbooking.jpg',1)"><img src="../webtravel/gambar/btnbooking.jpg"  id="btnbooking"/></td>
-					<td>About<a href="aboutbaru.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnabout','','../webtravel/gambar/btnabout.jpg',1)"><img src="../webtravel/gambar/btnabout.jpg"  id="btnabout"/></td>
-					<td>Logout<a href="logout.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnlogoutuser','','../gambar/btnlogoutuser2.jpg',1)"><img src="../webtravel/gambar/btnlogoutuser.jpg"  id="btnlogoutuser"/></td>
-				</tr>
-				<tr>
-					<td width="200" valign="top">
-						Profile Picture
-						<hr width="200" color="black">
-						<img src="../webtravel/gambar/profpic.jpg"  id="profpic" width="200" height="200"/>
-					</td>
-					<td colspan="5"><?php include "profile_ubah_form.php"; ?></td>
-				</tr>
+  <tr>
+    <td height="40" align="right">
+      <a href="logout.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnlogoutuser','','../webtravel/gambar/btnlogoutuser2.png',1)"><img src="../webtravel/gambar/btnlogoutuser.png" width="120" height="40" id="btnlogoutuser"/></a>
+    </td>
+  </tr>
+	<tr><td>
+		<table class="bgtable" width="900" height="700">
+			<tr>
+				<td align="center" valign="middle" height="100" colspan="2">
+          <table cellspacing="4" cellpadding="0" border="0">
+            <tr>
+              <td width="225" height="100" align="center" valign="middle">
+                <a href="homebaru.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('tmhome','','../webtravel/gambar/tmhome2.png',1)"><img src="../webtravel/gambar/tmhome.png" width="220" height="100" id="tmhome"/>
+              </td>
+              <td width="225" height="100" align="center" valign="middle">
+                <a href="profilefix.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('tmprofile','','../webtravel/gambar/tmprofile2.png',1)"><img src="../webtravel/gambar/tmprofile.png" width="220" height="100" id="tmprofile"/>
+              </td>
+              <td width="225" height="100" align="center" valign="middle">
+                <a href="booking.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('tmbooking','','../webtravel/gambar/tmbooking2.png',1)"><img src="../webtravel/gambar/tmbooking.png" width="220" height="100" id="tmbooking"/>
+              </td>
+              <td width="225" height="100" align="center" valign="middle">
+                <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('tmabout','','../webtravel/gambar/tmabout2.png',1)"><img src="../webtravel/gambar/tmabout.png" width="220" height="100" id="tmabout"/>
+              </td>
+            </tr>
+          </table>
+				</td>
+			</tr>
+      <tr>
+        <td width="200" valign="top">
+            <img src="../webtravel/gambar/profpic.jpg"  id="profpic" width="200" height="200"/>
+        </td>
+        <td colspan="3" width="650" valign="top"><?php include "profile_ubah_form.php"; ?></td>
+      </tr>
 		</table>
-		</td>
-		<td>
-	</tr>
+	</td>
 </table>
 
 </body>

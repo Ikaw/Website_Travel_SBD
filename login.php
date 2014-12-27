@@ -9,10 +9,10 @@ $cek = "Select username,password from member where username='".$user."' and pass
 $hasil = mysql_query($cek);
 $hasil_cek = mysql_num_rows($hasil);
 if ($hasil_cek==0){
-header("location:index.php");
+header("location:login_page.php");
 }else{
 	session_start();
 	$_SESSION['userlogin'] =$user;
-	header("location:home.php");
+	header("location:coba.php");
 }
 ?>

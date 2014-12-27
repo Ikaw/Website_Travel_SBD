@@ -79,7 +79,7 @@ form {
 	<tr>
       <td width="left" align="left" valign="top">ID Jadwal</td>
       <td width="left" align="left" valign="top">:</td>
-      <td width="left" align="left" valign="top"><label for="jadtxt"></label>
+      <td width="left" align="left" valign="top">
         <label for="jadlist"></label>
         <select name="jadlist" size="1" id="jadlist">
             
