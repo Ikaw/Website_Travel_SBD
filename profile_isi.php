@@ -4,7 +4,7 @@ if (ISSET($_SESSION['userlogin']))
 {
 }
 else
-header("location:coba.php");
+header("location:index.php");
 
 	require ("config.php");
 	//$perintah="select * from member where username ='".$_GET['id_member']."'";

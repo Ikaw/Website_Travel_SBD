@@ -1,5 +1,5 @@
 <?php session_start();
 if(isset($_SESSION['userlogin']))
   unset($_SESSION['userlogin']);
-  header("location:coba.php");
+  header("location:index.php");
 ?>

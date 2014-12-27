@@ -1,7 +1,7 @@
 <?php session_start();
 if (ISSET($_SESSION['userlogin']))
 {
-header("location:coba.php"); 		
+header("location:index.php"); 		
 }
 else
 ?>

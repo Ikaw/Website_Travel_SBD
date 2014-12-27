@@ -67,7 +67,7 @@
         <input type="submit" name="Submit" value="Simpan" />
         </label>
         <label>
-        <a href="profilefix.php"><input type="submit" value="Batal" /></a>
+        <a href="profile.php"><input type="submit" value="Batal" /></a>
         </label>
         </span></td>
     </tr>

@@ -8,11 +8,8 @@ form {
 #form1 table tr td p {
 	font-size: 14px;
 }
-
-input.error {
-    border: 1px dotted #F00;
-}
 </style>
+
 <script type="text/javascript">
 $(document).ready(function(){
   $("#form1").validate({

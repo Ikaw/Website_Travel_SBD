@@ -13,6 +13,6 @@ header("location:login_page.php");
 }else{
 	session_start();
 	$_SESSION['userlogin'] =$user;
-	header("location:coba.php");
+	header("location:index.php");
 }
 ?>

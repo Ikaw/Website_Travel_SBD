@@ -1,7 +1,7 @@
 <?php session_start();
 if (ISSET($_SESSION['userlogin']))
 {
-header("location:homebaru.php");	
+header("location:home.php");	
 }
 else
 ?>
@@ -76,7 +76,7 @@ p {
           <table cellspacing="4" cellpadding="0" border="0">
             <tr>
               <td width="225" height="100" align="center" valign="middle">
-                <a href="coba.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('tmhome','','../webtravel/gambar/tmhome2.png',1)"><img src="../webtravel/gambar/tmhome.png" width="220" height="100" id="tmhome"/>
+                <a href="index.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('tmhome','','../webtravel/gambar/tmhome2.png',1)"><img src="../webtravel/gambar/tmhome.png" width="220" height="100" id="tmhome"/>
               </td>
               <td width="225" height="100" align="center" valign="middle">
                 <a href="login.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('tmprofile','','../webtravel/gambar/tmprofile2.png',1)"><img src="../webtravel/gambar/tmprofile.png" width="220" height="100" id="tmprofile"/>

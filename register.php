@@ -51,11 +51,7 @@ body {
   opacity:0.6;
   fileter:alpha(opacity=75);
 }
-p {
-  font-family: Times New Roman;
-  font-size: 20px;
-  font-style: bold;
-}
+
 </style>
 <body onload="MM_preloadImages('../webtravel/gambar/btnlogin2.png','../webtravel/gambar/btnprofileuser2.png','../webtravel/gambar/btnbookinguser2.png','../webtravel/gambar/btnaboutuser2.png')">
 <table width="900" border="0" align="center" cellpadding="0" cellspacing="0" >

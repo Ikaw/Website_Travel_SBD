@@ -4,7 +4,7 @@ if (ISSET($_SESSION['userlogin']))
 //Tidak ada event, dalam artian menghindari jump page     
 }
 else
-header("location:coba.php");
+header("location:index.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -52,11 +52,7 @@ body {
   opacity:0.6;
   fileter:alpha(opacity=75);
 }
-p {
-  font-family: Times New Roman;
-  font-size: 20px;
-  font-style: bold;
-}
+
 </style>
 <body onload="MM_preloadImages('../webtravel/gambar/btnlogin2.png','../webtravel/gambar/btnprofileuser2.png','../webtravel/gambar/btnbookinguser2.png','../webtravel/gambar/btnaboutuser2.png')">
 <table width="900" border="0" align="center" cellpadding="0" cellspacing="0" >
@@ -75,16 +71,16 @@ p {
           <table cellspacing="4" cellpadding="0" border="0">
             <tr>
               <td width="225" height="100" align="center" valign="middle">
-                <a href="homebaru.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('tmhome','','../webtravel/gambar/tmhome2.png',1)"><img src="../webtravel/gambar/tmhome.png" width="220" height="100" id="tmhome"/>
+                <a href="home.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('tmhome','','../webtravel/gambar/tmhome2.png',1)"><img src="../webtravel/gambar/tmhome.png" width="220" height="100" id="tmhome"/>
               </td>
               <td width="225" height="100" align="center" valign="middle">
-                <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('tmprofile','','../webtravel/gambar/tmprofile2.png',1)"><img src="../webtravel/gambar/tmprofile.png" width="220" height="100" id="tmprofile"/>
+                <a href="profile.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('tmprofile','','../webtravel/gambar/tmprofile2.png',1)"><img src="../webtravel/gambar/tmprofile.png" width="220" height="100" id="tmprofile"/>
               </td>
               <td width="225" height="100" align="center" valign="middle">
-                <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('tmbooking','','../webtravel/gambar/tmbooking2.png',1)"><img src="../webtravel/gambar/tmbooking.png" width="220" height="100" id="tmbooking"/>
+                <a href="booking.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('tmbooking','','../webtravel/gambar/tmbooking2.png',1)"><img src="../webtravel/gambar/tmbooking.png" width="220" height="100" id="tmbooking"/>
               </td>
               <td width="225" height="100" align="center" valign="middle">
-                <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('tmabout','','../webtravel/gambar/tmabout2.png',1)"><img src="../webtravel/gambar/tmabout.png" width="220" height="100" id="tmabout"/>
+                <a href="aboutus.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('tmabout','','../webtravel/gambar/tmabout2.png',1)"><img src="../webtravel/gambar/tmabout.png" width="220" height="100" id="tmabout"/>
               </td>
             </tr>
           </table>

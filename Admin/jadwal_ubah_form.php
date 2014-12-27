@@ -14,7 +14,7 @@
       <td align="30%" valign="top">ID</td>
       <td align="1%" valign="top">:</td>
       <td align="69%" valign="top"><label for="idtxt"></label>
-      <input name="idtxt" type="text" id="idtxt" value="<?php echo $data['id_jadwal'] ?>" readonly="readonly" /></td>
+      <input name="idtxt" type="text" id="idtxt" value="<?php echo $data['id_jadwal'] ?>" /></td>
     </tr>
     <tr>
       <td width="left" align="left" valign="top">ID Trayek</td>
@@ -32,14 +32,6 @@
       ?>
       <option value="<?php echo "$data[id_trayek]"; ?>"><?php echo "$data[id_trayek]"; }?></option>
       </select></td>
-      <td>
-          <?php
-            require ("config.php");
-            $id = $_POST['tralist'];
-            $perintah="select pool from trayek where id_trayek='$id'";
-            $data=mysql_query($perintah);
-          ?>
-        <input name="poltxt" type="text" id="poltxt" value="<?php echo "$data[pool]";?>" readonly="readonly"></td>
     </tr>
 	<tr>
       <td width="left" align="left" valign="top">ID Jam Berangkat</td>
