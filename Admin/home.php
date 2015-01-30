@@ -4,7 +4,7 @@ if (ISSET($_SESSION['adminlogin']))
 //Tidak ada event, dalam artian menghindari jump page  		
 }
 else
-header("location:index.php");
+//header("location:index.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -61,9 +61,9 @@ body {
     <td colspan="2"><img src="../gambar/header2.jpg" width="900" height="30" /></td>
   </tr>
   <tr>
-    <td width="200"><table width="200" border="0" cellspacing="6" cellpadding="3">
+    <td width="200" valign="top"><table width="200" border="0" cellspacing="6" cellpadding="3">
       <tr>
-        <td><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnadmin','','../gambar/btnadmin2.jpg',1)"><img src="../gambar/btnadmin.jpg" width="200" height="30" id="btnadmin" /></a></td>
+        <td><a href="home.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnadmin','','../gambar/btnadmin2.jpg',1)"><img src="../gambar/btnadmin.jpg" width="200" height="30" id="btnadmin" /></a></td>
       </tr>
       <tr>
         <td><a href="member.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnmember','','../gambar/btnmember2.jpg',1)"><img src="../gambar/btnmember.jpg" width="200" height="30" id="btnmember" /></a></td>
@@ -84,7 +84,17 @@ body {
         <td><a href="logout.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnlogout','','../gambar/btnlogout2.jpg',1)"><img src="../gambar/btnlogout.jpg" width="200" height="30" id="btnlogout" /></a></td>
       </tr>
     </table></td>
-    <td width="600" valign="top"></td>
+    <td width="650" valign="top">
+    <table width="650" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="2"><?php include "isi.php"; ?></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    </table>
+  </td>
   </tr>
   <tr>
     <td colspan="2"><img src="../gambar/footeradmin.jpg" width="900" height="98" /></td>

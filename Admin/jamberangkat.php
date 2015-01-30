@@ -54,7 +54,7 @@ body {
   <tr>
     <td width="200" valign="top"><table width="200" border="0" cellspacing="6" cellpadding="3">
       <tr>
-        <td><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnadmin','','../gambar/btnadmin2.jpg',1)"><img src="../gambar/btnadmin.jpg" width="200" height="30" id="btnadmin" /></a></td>
+        <td><a href="home.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnadmin','','../gambar/btnadmin2.jpg',1)"><img src="../gambar/btnadmin.jpg" width="200" height="30" id="btnadmin" /></a></td>
       </tr>
       <tr>
         <td><a href="member.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btnmember','','../gambar/btnmember2.jpg',1)"><img src="../gambar/btnmember.jpg" width="200" height="30" id="btnmember" /></a></td>
